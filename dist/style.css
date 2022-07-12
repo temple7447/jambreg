@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button{
+    border: none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(238, 226, 226);
+    overflow-x: hidden;
+
+}
+.program{
+    color:black;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.absolue{
+    position: absolute;
+
+}
+.image{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.upper{
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+.family{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.imagestyle{
+    opacity: 80%;
+    
+    
+}
+.imagebackground{
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    background-image: 
+    linear-gradient( rgb(94, 156, 94),rgb(15, 12, 12)),
+    url('./jamb.webp');
+    
+    background-blend-mode: hard-light;
+}
+.imageform{
+   background-color: rgb(22, 177, 56);
+}
+
+li,a{
+    text-decoration: none;
+    list-style: none;
+}
+
+.bi{
+    margin-left:5px;
+    border-radius: 50%;
+}
+
+@media all and (max-width:480px){
+    
+    .program{
+        color: white;
+        font-weight: bold;
+    }
+    .homemessage{
+        font-size: 15px;
+    }
+    .blockarrange{
+        display: block;
+    }
+    .assignmentimage{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.registerform{
+    left: 25%;
+    width: 50%;
+     top:20% ;
+     border: none;
+    opacity:70% ;
+    @media screen and (max-width:480px){
+        width: 70%;  
+    }   
+}
