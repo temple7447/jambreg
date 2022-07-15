@@ -19,6 +19,7 @@ const passport = require('passport')
 const mysql = require('mysql')
 const connection = require('./config/sql')
 const NotificationRouter = require('./Router/notification');
+const NewsRouter = require('./Router/Newpage')
 
 const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
 
@@ -97,6 +98,7 @@ app.use('/',StudentRouter)
 app.use('/',MainRouter)
 app.use('/Admin',AdminRouter)
 app.use('/Admin',NotificationRouter)
+app.use('/',NewsRouter)
 
 
 const PORT = process.env.PORT || 4000

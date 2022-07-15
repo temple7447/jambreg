@@ -6,11 +6,7 @@ const Notification = new Schema({
        type:String,
         required:true
     },
-    morneven:{
-       type:String,
-        required:true
-    },
-    level:{
+    title:{
        type:String,
         required:true
     },
@@ -21,4 +17,4 @@ const Notification = new Schema({
     
 })
 
-module.exports  = mongoose.model("Notification",Notification )
+module.exports  = mongoose.model("NotificationJR",Notification )

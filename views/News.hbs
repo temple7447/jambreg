@@ -1,0 +1,20 @@
+<section>
+    <div><h1>NYSC NEWS</h1></div>
+
+        <section class="container">
+    {{#each list}}
+    <div class="row py-3 w-100">
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{this.title}}</h5>
+        <div>
+        <h5 class="card-title">{{this.data}}</h5>
+        </div>
+        <p class="card-text">{{this.message}}</p>
+      </div>
+    </div>
+  </div>
+{{/each}}
+</section>
+</section>

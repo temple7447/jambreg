@@ -1,0 +1,119 @@
+<section class="container my-2">
+    <div class="my-2">
+    <div><h1 class="text-center" style="font-family:'Times New Roman', Times, serif; font-weight:700;font-size:25px" >How To Do JAMB Regularization 2022/2023 (All You Need To Know)
+June 29, 2022, Leave a comment
+</h1></div>
+<p>On this page, I will show you how to do JAMB Regularization 2022/2023 and all you need to know about How To Do JAMB Regularization 2022/2023, the Requirement For JAMB Regularization, how to check your
+     JAMB Regularization status, and What JAMB regularization is all about.  Frequently Asked Questions</p>
+     <div>
+     <div>1. What Is Regularization In JAMB?</div>
+     <div>2. What Are The Requirement For JAMB Regularization?</div>
+     <div>3. How To Do JAMB Regularization 2022</div>
+     <div>4. How Do I Check My JAMB Regularization?</div>
+     <div>5. How To Do JAMB Regularization 2022/2023 (All You Need To Know) JAMB Regularization</div>
+     </div>
+    <div> 
+    </div>
+    </div>
+
+
+    <div class="my-2">
+    <div><h1 class="text-center" style="font-family:'Times New Roman', Times, serif; font-weight:700;font-size:30px" >What Is Regularization In JAMB?</h1></div>
+    <div>
+        <p>JAMB Regularization is the process of ensuring that the JAMB Board validates candidates’ current admission details with the school that offered admission to such candidates in their database with the aim of
+             either granting one gateway of securing admission and granting admission letter/registration Number.</p>
+        <p>The JAMB regularization procedure is designed to settle down or regulate ND, HND, OND, and NCE types of admission to the university and clear up the JAMB status of a prosperous student. The purpose of the JAMB regularization is to ensure that JAMB has your current
+             admission detail that tally with the admission/registration record in the school that offered you admission.</p>
+        <p>Applicants for JAMB regularization are also for students who don’t
+         have an admission letter from JAMB but was offered admission in tertiary institutions.</p>
+         <p>Students who
+             did not register JAMB during the year they were offered admission (ie from basic and certificate programme).</p>
+    </div>
+    </div>
+    
+    <div class="my-2">
+    <div><h1 class="text-center" style="font-family:'Times New Roman', Times, serif; font-weight:700;font-size:30px" >Requirement For JAMB Regularization 2022/2023</h1></div>
+    <div>
+        JAMB Result for an applicant who already has a valid JAMB Registration Number.
+If you don’t have a JAMB number you are also eligible to apply for regularization.
+<ul>
+    <li>- O’level Result</li>
+    <li>- WAEC, NECO, GCE, NABTEB or Combine Results.</li>
+    <li>- Passport photograph.</li>
+    <li>-Candidates Personal Details, that is; Address, Date Of Birth, Email Address,
+         Gender, Gsm Number, Marital Status, Names, Origin, Previous JAMB Registration Number, Year Of Enrollment.
+    </li>
+    <li>-Candidates Institution Details, that is; Institution Enrolled,
+         Reason For Not Being On JAMB List, Matriculation Number, Matriculation Year, 
+         Year Of Graduation, Serial No. On Graduating List, Head Of Institution, Registrar.</li>
+</ul>
+
+
+    </div>
+    </div>
+    <div class="my-2">
+    <div><h1 class="text-center" style="font-family:'Times New Roman', Times, serif; font-weight:700;font-size:30px" >How To Check JAMB Regularization Status 2022/2023</h1></div>
+    <div>
+        <ul>
+            <li>-Click on the button above</li>
+            <li>-Select your Exam Year and Enter your JAMB Registration Number in the required columns,  Year Of Enrollment, 
+                Means of Communication(WHATSAPP,SMS,EMAIL) </li>
+            <li>-You are required to Fee</li>
+
+        </ul>
+        <p>Click to Continue- {{> Click}}</p>
+    </div>
+    </div>
+</section>
+
+<section class="container w-100">
+    <div>
+        <p>Leave a Reply</p>
+        <div class="w-100">
+             <form class="form form-control w-100 my-4" action="/studentcomment" method="POST">
+            
+                <div>
+                    <label for="name">Comment *</label>
+                     <textarea type="text" class="form-control" required name="messagecomment"  id="fullname"></textarea>
+                   
+                </div>
+                <div>
+                    <label for="mat">Name *</label>
+                     <input type="text" class="form-control" required name="fullnamecomment"  id="fullname">
+                    
+                </div>
+                 <div>
+                    <label for="name">Email *</label>
+                    <input type="email" class="form-control mat" required name="emailcomment"   id="mat">
+                   
+                </div>
+
+              
+                <button type="submit" class="form-control btn-primary btn btns">Click To Submit</button>
+            </form>
+
+        </div>
+        
+    </div>
+</section>
+
+<section class="container">
+    <div>YOU MAY ALSO LIKE</div>
+    <p><a href="https://chat.whatsapp.com/FjdtMiwnHHqDTR61ErtD6C" target="_blank"> NYSC Whatsapp Group Link</a></p>
+</section>
+
+<section class="container">
+    <div>
+     {{#each lists}}
+    <div class="row py-3 w-100">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{this.fullnamecomment}}</h5>  
+        <p class="card-text">{{this.messagecomment}}</p>
+      </div>
+    </div>
+  </div>
+{{/each}}
+    </div>
+</section>

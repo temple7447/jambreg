@@ -7,6 +7,7 @@ const connection = require('../config/sql')
 
 const Notification = require('../Model/Notification')
 const Complain = require('../Model/Complain')
+const Comment = require('../Model/comment')
 
 const General = require('../Model/General');
 const JambRegularization = require('../Model/JambNames')
@@ -18,12 +19,12 @@ router.post('/payment',(req,res)=>{
 
 if(!jamereg && !detailform){
   console.log('fill or the form')
-  res.redirect('/')
+  res.redirect('/submittion')
 
 }else
 if(jamereg.length <5 || jamereg.length > 13){
   console.log('input the correct jamb number')
-  res.redirect('/')
+  res.redirect('/submittion')
  
 }
 else{
@@ -81,6 +82,33 @@ router.post('/student',(req,res)=>{
         fullname:fullname,
         matriculation:matriculation,
         compfield:compfield
+      })
+      NewComplain.save().then(()=>{
+        res.redirect('/')
+      }).catch((err)=>{
+        console.log(err)
+      })
+
+    }
+
+  })
+
+
+
+})
+
+router.post('/studentcomment',(req,res)=>{
+  const {messagecomment,fullnamecomment,emailcomment} = req.body;
+
+  Comment.find({}).then((user)=>{
+    if(!user){
+      res.send('we are still working on you work')
+    }
+    else{
+      const NewComplain = new Comment({
+        messagecomment:messagecomment,
+        fullnamecomment:fullnamecomment,
+        emailcomment:emailcomment
       })
       NewComplain.save().then(()=>{
         res.redirect('/')

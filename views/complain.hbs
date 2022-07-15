@@ -1,4 +1,21 @@
-    <section class="container">
+
+
+
+{{> SideBar}}
+
+	<!-- NAVBAR -->
+	<section id="content">
+		<!-- NAVBAR -->
+{{> Nav}}
+		<!-- NAVBAR -->
+
+		
+		<!-- MAIN -->
+		<main>
+	
+		{{> notsubmain}}
+
+       <section class="container">
     {{#each list}}
     <div class="row py-3 w-100">
   <div class="col">
@@ -16,3 +33,10 @@
   </div>
 {{/each}}
 </section>
+
+	
+
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- NAVBAR -->

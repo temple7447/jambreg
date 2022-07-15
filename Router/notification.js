@@ -11,43 +11,40 @@ router.get('/notification',(req,res)=>{
     if(err){
         console.log(err)
         res.status(500).send("it's a server err" + err)
-    }else{
+    }else{            
+          res.render('notification',{layout:'Admin',content:'NOTIFICATION',list:informs})   
+      
+    }
+})  
+})
+
+
+router.get('/complain',(req,res)=>{
+
+    
       Complain.find({},(err,inform)=>{
 
         if(err){
             console.log(err)
             res.status(500).send("it's a server err" + err)
-        }else{
-          
-          res.render('notification',{layout:'notification',content:'NOTIFICATION',list:inform})
-    
-        }
-    
+        }else{         
+          res.render('complain',{layout:'Admin',content:'COMPLAIN',list:inform})   
+        }   
     })
-      
-        
-
-    }
 
 })
-    
-   
-})
+
 router.post('/notification',(req,res)=>{
     const {message,morneven,level,time} = req.body
-
-
-    
-    const User = new Notification({
+       const User = new Notification({
         message:message,
-        morneven:morneven,
-        level:level,
+        title:title,
         time:time
         
       })
       User.save().then((created)=>{
         console.log('it has be created for notification')
-        res.redirect('/admin/notification')
+        res.redirect('/admin/complain')
       })
       .catch((err)=>{
         console.log(err)
@@ -69,7 +66,7 @@ router.post('/notificationdelete',(req,res)=>{
 router.post('/complaindelete',(req,res)=>{
  const {id} = req.body;
  Complain.deleteOne({_id:id}).then(()=>{
-   res.redirect('/admin/notification')
+   res.redirect('/admin/complain')
  }).catch((err)=>{
    console.log(err)
  })

@@ -13,13 +13,16 @@ const Notification = require('../Model/Notification')
 
     router.get('/',(req,res)=>{
         JambNames.find({}).then((user)=>{
-            res.render('admin',{layout:'admin', list:user})   
-        }).catch((error)=>{
-            console.log(error)
-        })
-
-
-    })
+          if(!user){
+            console.log("ok")
+          }else
+          {
+            res.render('admin',{layout:'admin', list:user})  
+          }
+ }).catch((err)=>{
+  console.log(err)
+ })
+})
 
 
     router.post('/delete',(req,res)=>{

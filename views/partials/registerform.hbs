@@ -1,4 +1,4 @@
- <section  class="container  position-absolute registerform  text-white">
+ <section  class="container  text-white">
 
             <form class="form form-control my-4 imageform" action="/payment" method="POST"> 
               <div class="col-md-12">
@@ -7,7 +7,10 @@
             </div>
             <div>
                     <label class="program" for="mat">YEAR</label>
-                    <select class="form-control " style="border: none; opacity:40%" name="years" id="level">
+                    <select class="form-control "  name="years" id="level">
+                        <option value="year13">2013</option>
+                        <option value="year14">2014</option>
+                        <option value="year15">2015</option>
                         <option value="year16">2016</option>
                         <option value="year17">2017</option>
                         <option value="year18">2018</option>
@@ -19,7 +22,7 @@
               
                 <div>
                     <label class="program" for="mat">MEANS OF COMMUNICATION</label>
-                    <select class="form-control level" style="border: none; opacity:40%" name="meanscom" id="level">
+                    <select class="form-control level" name="meanscom" id="level">
                         <option value="email">EMAIL</option>
                         <option value="whatsapp">WHATSAPP</option>
                         <option value="sms">SMS</option>
